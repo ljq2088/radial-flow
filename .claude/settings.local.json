@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(cmake:*)",
+      "Bash(g++ --version:*)",
+      "Bash(make install:*)",
+      "Bash(python -m python.radial_flow:*)",
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(ls:*)"
+    ]
+  }
+}

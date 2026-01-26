@@ -1,0 +1,2 @@
+/usr/bin/ar qc libradial_flow_core.a CMakeFiles/radial_flow_core.dir/src/radial_flow.cpp.o
+/usr/bin/ranlib libradial_flow_core.a
