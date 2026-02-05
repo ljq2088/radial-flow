@@ -1,0 +1,27 @@
+# 创建测试脚本                                                                                                                                                                                                                                                                                                                                            
+import numpy as np                                                                                                                                                                              
+from python.radial_flow import SchwarzschildParams, WaveParams, RadialFlowSolver                                                                                                                
+                                                                                                                                                                                                
+bh = SchwarzschildParams(r0=2.0)                                                                                                                                                                
+omega = 0.2  # 修改为你要测试的频率                                                                                                                                                             
+wave = WaveParams(omega=omega, l=0)                                                                                                                                                             
+solver = RadialFlowSolver(bh, wave)                                                                                                                                                             
+                                                                                                                                                                                                
+# 测试不同参数                                                                                                                                                                                  
+for epsilon in [1e-6, 1e-3]:                                                                                                                                                                    
+    for n_points in [10000, 100000, 400000]:                                                                                                                                                    
+        print(f"\nepsilon={epsilon:.0e}, n_points={n_points}")                                                                                                                                  
+        result = solver.solve(                                                                                                                                                                  
+            r_max=200.0,                                                                                                                                                                        
+            epsilon=epsilon,                                                                                                                                                                    
+            n_points=n_points,                                                                                                                                                                  
+            convergence_threshold=1e10,  # 强制积分到 r_max                                                                                                                                     
+            n_periods=2,                                                                                                                                                                        
+            max_r_factor=1.0                                                                                                                                                                    
+        )                                                                                                                                                                                       
+                                                                                                                                                                                                
+        has_nan = np.any(np.isnan(result['sigma']))                                                                                                                                             
+        if has_nan:                                                                                                                                                                             
+            print(f"  ✗ 包含 nan")                                                                                                                                                              
+        else:                                                                                                                                                                                   
+            print(f"  ✓ |A/B| = {np.abs(result['reflection_coeff']):.6e}") 

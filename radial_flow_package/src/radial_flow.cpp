@@ -20,7 +20,7 @@ double RadialFlowSolver::potential_V(double r) const {
 
     if (wave_.use_subleading_term) {
         // 完整版本：V = l(l+1)/r^2 + f'/r
-        // 对应正确的渐近行为：R ~ (A_0 + A_1/r) * r^{-1} * e^{iω r_*}
+        // 对应正确的渐近行为：R ~ (A_0 + A_1/r) * r^{-1} * e^{iω r_*}+ (B_0 + B_1/r) * r^{-1} * e^{-iω r_*}
         double f_prime = bh_.f_prime(r);
         return V_angular + f_prime / r;
     } else {

@@ -1,0 +1,98 @@
+================================================================================
+Radial Flow 计算包 - 安装和使用指南
+================================================================================
+
+## 快速开始（3 步）
+
+1. 编译：
+   ./build.sh
+
+2. 测试：
+   python3 quick_test.py
+
+3. 运行演示：
+   python3 demo.py
+
+## 详细说明
+
+### 依赖项
+
+必需：
+- C++17 编译器 (g++, clang++)
+- CMake 3.15+
+- Python 3.8+
+- numpy, matplotlib
+
+安装 Python 依赖：
+  pip install numpy matplotlib
+
+### 编译
+
+方法 1 - 使用编译脚本（推荐）：
+  ./build.sh
+
+方法 2 - 手动编译：
+  mkdir -p build
+  cd build
+  cmake ..
+  make
+  cp _radial_flow_cpp*.so ../python/
+  cd ..
+
+### 运行
+
+1. 快速测试（验证安装）：
+   python3 quick_test.py
+
+2. 完整演示（包含可视化）：
+   python3 demo.py
+
+3. 查看使用示例：
+   python3 example_usage.py
+
+### 输出
+
+- 文本输出：终端显示
+- 图表输出：figures/radial_flow_comparison.png
+
+### 移植到其他电脑
+
+1. 复制整个 radial_flow_package 文件夹
+2. 在新电脑上运行 ./build.sh
+3. 运行 python3 demo.py 测试
+
+无需修改任何路径！
+
+### 故障排除
+
+问题：编译失败 "pybind11 not found"
+解决：pip install pybind11
+
+问题：编译失败 "Python.h not found"
+解决：sudo apt-get install python3-dev
+
+问题：运行失败 "No module named '_radial_flow_cpp'"
+解决：重新运行 ./build.sh
+
+### 文件说明
+
+核心文件：
+- include/radial_flow.hpp    : C++ 头文件
+- src/radial_flow.cpp        : C++ 实现
+- src/bindings.cpp           : Python 绑定
+- python/radial_flow.py      : Python 包装
+
+脚本：
+- demo.py                    : 主演示脚本（推荐）
+- quick_test.py              : 快速测试
+- example_usage.py           : 使用示例
+
+配置：
+- CMakeLists.txt             : CMake 配置
+- build.sh                   : 编译脚本
+
+文档：
+- README.md                  : 完整文档
+- INSTALL.txt                : 本文件
+
+================================================================================

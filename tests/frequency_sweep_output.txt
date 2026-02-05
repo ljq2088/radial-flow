@@ -1,0 +1,147 @@
+Debug: omega=0.1, period=62.8319, points_per_period=1579, check_window=7895
+Debug: check_count=1000, r/r0=178.008, relative_osc=1.26789, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=197.91, relative_osc=0.453037, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=217.812, relative_osc=0.319781, threshold=0.1, r>r_end=1
+Debug: check_count=4000, r/r0=237.714, relative_osc=0.245343, threshold=0.1, r>r_end=1
+Debug: check_count=5000, r/r0=257.616, relative_osc=0.17527, threshold=0.1, r>r_end=1
+Debug: check_count=6000, r/r0=277.518, relative_osc=0.122794, threshold=0.1, r>r_end=1
+Debug: check_count=7000, r/r0=297.42, relative_osc=0.107514, threshold=0.1, r>r_end=1
+Converged! r/r0=304.784, relative_osc=0.0998003
+Debug: omega=0.2, period=31.4159, points_per_period=790, check_window=3950
+Debug: check_count=1000, r/r0=99.495, relative_osc=0.485161, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=119.397, relative_osc=0.245648, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=139.299, relative_osc=0.129932, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=159.201, relative_osc=0.0787266, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=179.103, relative_osc=0.0662135, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=199.005, relative_osc=0.0470274, threshold=0.1, r>r_end=0
+Converged! r/r0=200, relative_osc=0.047734
+Debug: omega=0.3, period=20.944, points_per_period=527, check_window=2635
+Debug: check_count=1000, r/r0=73.3238, relative_osc=0.359188, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=93.2258, relative_osc=0.13835, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=113.128, relative_osc=0.0762125, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=133.03, relative_osc=0.0496415, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=152.932, relative_osc=0.0355168, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=172.834, relative_osc=0.0269108, threshold=0.1, r>r_end=0
+Debug: check_count=7000, r/r0=192.736, relative_osc=0.0224117, threshold=0.1, r>r_end=0
+Converged! r/r0=200, relative_osc=0.0211084
+Debug: omega=0.5, period=12.5664, points_per_period=316, check_window=1580
+Debug: check_count=1000, r/r0=52.3272, relative_osc=0.143638, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=72.2292, relative_osc=0.0659818, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=92.1312, relative_osc=0.03446, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=112.033, relative_osc=0.0249269, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=131.935, relative_osc=0.0184182, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=151.837, relative_osc=0.0141515, threshold=0.1, r>r_end=0
+Debug: check_count=7000, r/r0=171.739, relative_osc=0.01195, threshold=0.1, r>r_end=0
+Debug: check_count=8000, r/r0=191.641, relative_osc=0.00947942, threshold=0.1, r>r_end=0
+Converged! r/r0=200, relative_osc=0.00942188
+Debug: omega=0.7, period=8.97598, points_per_period=226, check_window=1130
+Debug: check_count=1000, r/r0=43.3713, relative_osc=0.356751, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=63.2733, relative_osc=0.175846, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=83.1753, relative_osc=0.115519, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=103.077, relative_osc=0.0857446, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=122.979, relative_osc=0.0681269, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=142.881, relative_osc=0.0565391, threshold=0.1, r>r_end=0
+Debug: check_count=7000, r/r0=162.783, relative_osc=0.0483421, threshold=0.1, r>r_end=0
+Debug: check_count=8000, r/r0=182.685, relative_osc=0.0422179, threshold=0.1, r>r_end=0
+Converged! r/r0=200, relative_osc=0.0378651
+Debug: omega=1, period=6.28319, points_per_period=158, check_window=790
+Debug: check_count=1000, r/r0=36.6047, relative_osc=5.18039, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=56.5067, relative_osc=2.67685, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=76.4086, relative_osc=1.76539, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=96.3106, relative_osc=1.31457, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=116.213, relative_osc=1.05821, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=136.115, relative_osc=0.895199, threshold=0.1, r>r_end=0
+Debug: check_count=7000, r/r0=156.017, relative_osc=0.772648, threshold=0.1, r>r_end=0
+Debug: check_count=8000, r/r0=175.919, relative_osc=0.672785, threshold=0.1, r>r_end=0
+Debug: check_count=9000, r/r0=195.821, relative_osc=0.59674, threshold=0.1, r>r_end=0
+Debug: check_count=10000, r/r0=215.723, relative_osc=0.540182, threshold=0.1, r>r_end=1
+Debug: check_count=11000, r/r0=235.625, relative_osc=0.492557, threshold=0.1, r>r_end=1
+Debug: check_count=12000, r/r0=255.527, relative_osc=0.450075, threshold=0.1, r>r_end=1
+Debug: check_count=13000, r/r0=275.429, relative_osc=0.415414, threshold=0.1, r>r_end=1
+Debug: check_count=14000, r/r0=295.331, relative_osc=0.387246, threshold=0.1, r>r_end=1
+Debug: check_count=15000, r/r0=315.233, relative_osc=0.361359, threshold=0.1, r>r_end=1
+Debug: check_count=16000, r/r0=335.135, relative_osc=0.338092, threshold=0.1, r>r_end=1
+Debug: check_count=17000, r/r0=355.037, relative_osc=0.318788, threshold=0.1, r>r_end=1
+Debug: check_count=18000, r/r0=374.938, relative_osc=0.301592, threshold=0.1, r>r_end=1
+Debug: check_count=19000, r/r0=394.84, relative_osc=0.285247, threshold=0.1, r>r_end=1
+Debug: check_count=20000, r/r0=414.742, relative_osc=0.270984, threshold=0.1, r>r_end=1
+Debug: check_count=21000, r/r0=434.644, relative_osc=0.258614, threshold=0.1, r>r_end=1
+Debug: check_count=22000, r/r0=454.546, relative_osc=0.246707, threshold=0.1, r>r_end=1
+Debug: check_count=23000, r/r0=474.448, relative_osc=0.235758, threshold=0.1, r>r_end=1
+Debug: check_count=24000, r/r0=494.35, relative_osc=0.226285, threshold=0.1, r>r_end=1
+Debug: check_count=25000, r/r0=514.252, relative_osc=0.217305, threshold=0.1, r>r_end=1
+Debug: check_count=26000, r/r0=534.154, relative_osc=0.208702, threshold=0.1, r>r_end=1
+Debug: check_count=27000, r/r0=554.056, relative_osc=0.201129, threshold=0.1, r>r_end=1
+Debug: check_count=28000, r/r0=573.958, relative_osc=0.194125, threshold=0.1, r>r_end=1
+Debug: check_count=29000, r/r0=593.86, relative_osc=0.187246, threshold=0.1, r>r_end=1
+Debug: check_count=30000, r/r0=613.762, relative_osc=0.18102, threshold=0.1, r>r_end=1
+Debug: check_count=31000, r/r0=633.664, relative_osc=0.175382, threshold=0.1, r>r_end=1
+Debug: check_count=32000, r/r0=653.566, relative_osc=0.169797, threshold=0.1, r>r_end=1
+Debug: check_count=33000, r/r0=673.468, relative_osc=0.164588, threshold=0.1, r>r_end=1
+Debug: check_count=34000, r/r0=693.37, relative_osc=0.159921, threshold=0.1, r>r_end=1
+Debug: check_count=35000, r/r0=713.272, relative_osc=0.155321, threshold=0.1, r>r_end=1
+Debug: check_count=36000, r/r0=733.174, relative_osc=0.150907, threshold=0.1, r>r_end=1
+Debug: check_count=37000, r/r0=753.076, relative_osc=0.146955, threshold=0.1, r>r_end=1
+Debug: check_count=38000, r/r0=772.978, relative_osc=0.143113, threshold=0.1, r>r_end=1
+Debug: check_count=39000, r/r0=792.88, relative_osc=0.139339, threshold=0.1, r>r_end=1
+Debug: check_count=40000, r/r0=812.782, relative_osc=0.13593, threshold=0.1, r>r_end=1
+Debug: check_count=41000, r/r0=832.684, relative_osc=0.132677, threshold=0.1, r>r_end=1
+Debug: check_count=42000, r/r0=852.586, relative_osc=0.129426, threshold=0.1, r>r_end=1
+Debug: check_count=43000, r/r0=872.488, relative_osc=0.126445, threshold=0.1, r>r_end=1
+Debug: check_count=44000, r/r0=892.39, relative_osc=0.123652, threshold=0.1, r>r_end=1
+Debug: check_count=45000, r/r0=912.292, relative_osc=0.120833, threshold=0.1, r>r_end=1
+Debug: check_count=46000, r/r0=932.194, relative_osc=0.118201, threshold=0.1, r>r_end=1
+Debug: check_count=47000, r/r0=952.096, relative_osc=0.115771, threshold=0.1, r>r_end=1
+Debug: check_count=48000, r/r0=971.998, relative_osc=0.113313, threshold=0.1, r>r_end=1
+Debug: check_count=49000, r/r0=991.9, relative_osc=0.11097, threshold=0.1, r>r_end=1
+Debug: check_count=50000, r/r0=1011.8, relative_osc=0.10883, threshold=0.1, r>r_end=1
+Debug: check_count=51000, r/r0=1031.7, relative_osc=0.106673, threshold=0.1, r>r_end=1
+Debug: check_count=52000, r/r0=1051.61, relative_osc=0.104577, threshold=0.1, r>r_end=1
+Debug: check_count=53000, r/r0=1071.51, relative_osc=0.102671, threshold=0.1, r>r_end=1
+Debug: check_count=54000, r/r0=1091.41, relative_osc=0.100768, threshold=0.1, r>r_end=1
+Converged! r/r0=1099.75, relative_osc=0.0999985
+Debug: omega=1.5, period=4.18879, points_per_period=106, check_window=530
+Debug: check_count=1000, r/r0=31.4301, relative_osc=0.460645, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=51.3321, relative_osc=0.235782, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=71.2341, relative_osc=0.161976, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=91.1361, relative_osc=0.122204, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=111.038, relative_osc=0.0967972, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=130.94, relative_osc=0.0805202, threshold=0.1, r>r_end=0
+Debug: check_count=7000, r/r0=150.842, relative_osc=0.0696617, threshold=0.1, r>r_end=0
+Debug: check_count=8000, r/r0=170.744, relative_osc=0.0613844, threshold=0.1, r>r_end=0
+Debug: check_count=9000, r/r0=190.646, relative_osc=0.0547758, threshold=0.1, r>r_end=0
+Converged! r/r0=200, relative_osc=0.0520522
+Debug: omega=2, period=3.14159, points_per_period=79, check_window=395
+Debug: check_count=1000, r/r0=28.7434, relative_osc=0.0355639, threshold=0.1, r>r_end=0
+Debug: check_count=2000, r/r0=48.6454, relative_osc=0.0152219, threshold=0.1, r>r_end=0
+Debug: check_count=3000, r/r0=68.5474, relative_osc=0.0100409, threshold=0.1, r>r_end=0
+Debug: check_count=4000, r/r0=88.4493, relative_osc=0.00731745, threshold=0.1, r>r_end=0
+Debug: check_count=5000, r/r0=108.351, relative_osc=0.00574799, threshold=0.1, r>r_end=0
+Debug: check_count=6000, r/r0=128.253, relative_osc=0.00478025, threshold=0.1, r>r_end=0
+Debug: check_count=7000, r/r0=148.155, relative_osc=0.00407676, threshold=0.1, r>r_end=0
+Debug: check_count=8000, r/r0=168.057, relative_osc=0.00356745, threshold=0.1, r>r_end=0
+Debug: check_count=9000, r/r0=187.959, relative_osc=0.0031613, threshold=0.1, r>r_end=0
+Converged! r/r0=200, relative_osc=0.00296937
+Debug: omega=3, period=2.0944, points_per_period=53, check_window=265
+Debug: omega=5, period=1.25664, points_per_period=32, check_window=160
+qt.qpa.plugin: Could not find the Qt platform plugin "wayland" in ""
+======================================================================
+频率扫描：自适应收敛测试
+======================================================================
+
+ω =  0.10: r/r0 =   304.8, points =  15265, converged = True, |A/B| = 1.000000
+ω =  0.20: r/r0 =   200.0, points =  10000, converged = True, |A/B| = 0.999995
+ω =  0.30: r/r0 =   200.0, points =  10000, converged = True, |A/B| = 0.999661
+ω =  0.50: r/r0 =   200.0, points =  10000, converged = True, |A/B| = 0.767090
+ω =  0.70: r/r0 =   200.0, points =  10000, converged = True, |A/B| = 0.055970
+ω =  1.00: r/r0 =  1099.7, points =  55209, converged = True, |A/B| = 0.002081
+ω =  1.50: r/r0 =   200.0, points =  10000, converged = True, |A/B| = 0.017227
+ω =  2.00: r/r0 =   200.0, points =  10000, converged = True, |A/B| = 0.261295
+ω =  3.00: r/r0 =  2000.0, points = 100444, converged = False, |A/B| = nan
+ω =  5.00: r/r0 =  2000.0, points = 100444, converged = False, |A/B| = nan
+
+======================================================================
+扫描完成
+======================================================================
+
+图像已保存到 frequency_sweep_adaptive.png

@@ -1,0 +1,38 @@
+# Build directories
+build/
+*.so
+*.o
+*.a
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Output files
+*.output
+/tmp/
+
+# Compiled Python modules
+*.cpython-*.so

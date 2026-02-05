@@ -1,0 +1,99 @@
+Radial Flow 计算包 - 文件清单
+================================
+
+## 核心文件（必需）
+
+### C++ 源代码
+- include/radial_flow.hpp          # C++ 头文件（类和函数声明）
+- src/radial_flow.cpp              # C++ 实现（核心计算逻辑）
+- src/bindings.cpp                 # Python 绑定（pybind11）
+
+### Python 接口
+- python/radial_flow.py            # Python 包装层
+- python/_radial_flow_cpp.*.so     # 编译后的 C++ 模块（需要编译生成）
+
+### 构建配置
+- CMakeLists.txt                   # CMake 配置文件
+- build.sh                         # 一键编译脚本（可选）
+
+## 演示和文档
+
+### 主要脚本
+- demo.py                          # 主演示脚本（推荐使用）
+  * 计算简化版本和完整版本
+  * 输出详细文本结果
+  * 生成可视化图表
+
+- quick_test.py                    # 快速测试脚本
+  * 验证安装
+  * 基本功能测试
+
+- example_usage.py                 # 使用示例
+  * 详细的 API 调用示例
+  * 参数说明
+
+### 文档
+- PACKAGE_README.md                # 完整使用文档（主文档）
+  * 安装说明
+  * API 参考
+  * 使用示例
+  * 故障排除
+
+- PACKAGE_MANIFEST.txt             # 本文件（文件清单）
+
+- QUICK_REFERENCE.md               # 快速参考（如果存在）
+
+## 输出目录
+
+- build/                           # 编译输出目录
+  * CMake 缓存
+  * 编译产物
+
+- figures/                         # 图表输出目录
+  * radial_flow_comparison.png     # demo.py 生成的对比图表
+
+## 最小使用流程
+
+1. 编译 C++ 代码：
+   cd build && cmake .. && make && cp *.so ../python/
+
+2. 运行演示：
+   python3 demo.py
+
+3. 查看结果：
+   - 终端输出：文本结果
+   - figures/radial_flow_comparison.png：可视化图表
+
+## 核心 API 使用
+
+```python
+from python.radial_flow import SchwarzschildParams, WaveParams, RadialFlowSolver
+
+# 设置参数
+bh = SchwarzschildParams(r0=2.0)
+wave = WaveParams(omega=0.2, l=0, use_subleading_term=True)
+
+# 计算
+solver = RadialFlowSolver(bh, wave)
+result = solver.solve()
+
+# 获取结果
+print(f"|A/B| = {abs(result['reflection_coeff']):.6f}")
+```
+
+## 参数说明
+
+use_subleading_term:
+  - True:  完整版本，V = l(l+1)/r² + f'/r（包含次领头项）
+  - False: 简化版本，V = l(l+1)/r²（不包含次领头项）
+
+## 依赖项
+
+- C++17 编译器
+- CMake 3.15+
+- Python 3.8+
+- pybind11（自动下载）
+- numpy, matplotlib（Python 包）
+
+================================
+最后更新：2026-02-04
