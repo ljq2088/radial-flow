@@ -1,0 +1,18 @@
+kerr_matcher_project/
+├── README.md
+├── pyproject.toml
+├── requirements.txt
+├── src/
+│   └── kerr_matcher/
+│       ├── __init__.py
+│       ├── params.py
+│       ├── kerr.py
+│       ├── chebyshev.py
+│       ├── flow.py
+│       ├── spectral.py
+│       ├── matching.py
+│       └── solver.py
+├── examples/
+│   └── run_case.py
+└── tests/
+    └── smoke_test.py

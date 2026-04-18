@@ -23,23 +23,26 @@ PYBIND11_MODULE(_radial_flow_cpp, m) {
 
     // WaveParams
     py::class_<WaveParams>(m, "WaveParams")
-        .def(py::init([](Complex omega, int l, int m = 0, bool use_subleading_term = true) {
+        .def(py::init([](Complex omega, int l, int m = 0, bool use_subleading_term = true, bool integrate_in_rstar = false) {
             WaveParams w;
             w.omega = omega;
             w.l = l;
             w.m = m;
             w.use_subleading_term = use_subleading_term;
+            w.integrate_in_rstar = integrate_in_rstar;
             return w;
         }),
         py::arg("omega"),
         py::arg("l"),
         py::arg("m") = 0,
         py::arg("use_subleading_term") = true,
-        "Initialize WaveParams with omega, l, optional m and use_subleading_term")
+        py::arg("integrate_in_rstar") = false,
+        "Initialize WaveParams with omega, l, optional m, use_subleading_term, and integrate_in_rstar")
         .def_readwrite("omega", &WaveParams::omega)
         .def_readwrite("l", &WaveParams::l)
         .def_readwrite("m", &WaveParams::m)
-        .def_readwrite("use_subleading_term", &WaveParams::use_subleading_term);
+        .def_readwrite("use_subleading_term", &WaveParams::use_subleading_term)
+        .def_readwrite("integrate_in_rstar", &WaveParams::integrate_in_rstar);
 
     // SolveResult
     py::class_<SolveResult>(m, "SolveResult")

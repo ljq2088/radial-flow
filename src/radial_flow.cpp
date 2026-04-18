@@ -53,6 +53,14 @@ Complex RadialFlowSolver::sigma_rhs(double r, Complex sigma) const {
     return a + b*sigma + c*sigma*sigma;
 }
 
+Complex RadialFlowSolver::sigma_rhs_rstar(double r, Complex sigma) const {
+    // dσ/dr* = (dσ/dr) × (dr/dr*)
+    // 其中 dr/dr* = (r - r₀)/r
+    Complex dsigma_dr = sigma_rhs(r, sigma);
+    double dr_drstar = (r - bh_.r0) / r;
+    return dsigma_dr * dr_drstar;
+}
+
 std::pair<double, Complex> RadialFlowSolver::sigma_initial(double epsilon) const {
     double r0 = bh_.r0;
     Complex omega = wave_.omega;
@@ -87,13 +95,41 @@ std::pair<double, Complex> RadialFlowSolver::sigma_initial(double epsilon) const
     return {r_start, sigma_start};
 }
 
-void RadialFlowSolver::rk4_step(double r, Complex& sigma, double dr) const {
-    Complex k1 = sigma_rhs(r, sigma);
-    Complex k2 = sigma_rhs(r + 0.5*dr, sigma + 0.5*dr*k1);
-    Complex k3 = sigma_rhs(r + 0.5*dr, sigma + 0.5*dr*k2);
-    Complex k4 = sigma_rhs(r + dr, sigma + dr*k3);
+void RadialFlowSolver::rk4_step(double r, Complex& sigma, double& dr) const {
+    if (wave_.integrate_in_rstar) {
+        // 在r*坐标积分：输入的dr是dr*，需要计算对应的dr
+        // dr/dr* = (r - r₀)/r，所以 dr = dr* × (r - r₀)/r
+        double dr_rstar = dr;  // 保存原始的dr*
+        double dr_r = dr_rstar * (r - bh_.r0) / r;  // 转换为dr
 
-    sigma = sigma + (dr/6.0) * (k1 + 2.0*k2 + 2.0*k3 + k4);
+        Complex k1 = sigma_rhs_rstar(r, sigma);
+
+        // 第二步：r向前走0.5*dr_r
+        double r2 = r + 0.5*dr_r;
+        double dr_r2 = dr_rstar * (r2 - bh_.r0) / r2;
+        Complex k2 = sigma_rhs_rstar(r2, sigma + 0.5*dr_rstar*k1);
+
+        // 第三步：r向前走0.5*dr_r2（从r开始）
+        double r3 = r + 0.5*dr_r2;
+        double dr_r3 = dr_rstar * (r3 - bh_.r0) / r3;
+        Complex k3 = sigma_rhs_rstar(r3, sigma + 0.5*dr_rstar*k2);
+
+        // 第四步：r向前走dr_r3（从r开始）
+        double r4 = r + dr_r3;
+        Complex k4 = sigma_rhs_rstar(r4, sigma + dr_rstar*k3);
+
+        sigma = sigma + (dr_rstar/6.0) * (k1 + 2.0*k2 + 2.0*k3 + k4);
+        dr = dr_r;  // 返回实际的dr（用于更新r）
+    } else {
+        // 在r坐标积分（原来的方法）
+        Complex k1 = sigma_rhs(r, sigma);
+        Complex k2 = sigma_rhs(r + 0.5*dr, sigma + 0.5*dr*k1);
+        Complex k3 = sigma_rhs(r + 0.5*dr, sigma + 0.5*dr*k2);
+        Complex k4 = sigma_rhs(r + dr, sigma + dr*k3);
+
+        sigma = sigma + (dr/6.0) * (k1 + 2.0*k2 + 2.0*k3 + k4);
+        // dr保持不变
+    }
 }
 
 SolveResult RadialFlowSolver::solve(double r_max, double epsilon, int n_points,
@@ -102,7 +138,18 @@ SolveResult RadialFlowSolver::solve(double r_max, double epsilon, int n_points,
     auto [r_start, sigma_start] = sigma_initial(epsilon);
 
     double r_end = r_max * bh_.r0;
-    double dr = (r_end - r_start) / static_cast<double>(n_points - 1);
+
+    // 计算步长
+    double step_size;
+    if (wave_.integrate_in_rstar) {
+        // 在r*坐标积分：计算r*的范围和步长
+        double rstar_start = r_start + bh_.r0 * std::log(r_start / bh_.r0 - 1.0);
+        double rstar_end = r_end + bh_.r0 * std::log(r_end / bh_.r0 - 1.0);
+        step_size = (rstar_end - rstar_start) / static_cast<double>(n_points - 1);
+    } else {
+        // 在r坐标积分：直接计算dr
+        step_size = (r_end - r_start) / static_cast<double>(n_points - 1);
+    }
 
     std::vector<double> r_vec;
     std::vector<Complex> sigma_vec;
@@ -116,24 +163,29 @@ SolveResult RadialFlowSolver::solve(double r_max, double epsilon, int n_points,
     // 计算检测窗口大小
     double omega_abs = std::abs(wave_.omega);
     double period = 2.0 * M_PI / omega_abs;
-    int points_per_period = static_cast<int>(period / dr) + 1;
-    int check_window = n_periods * points_per_period;
 
-    // 调试输出（已禁用）
-    // std::cout << "Debug: omega=" << omega_abs << ", period=" << period
-    //           << ", points_per_period=" << points_per_period
-    //           << ", check_window=" << check_window << std::endl;
+    // 估算每个周期的点数（使用r坐标的平均步长）
+    double avg_dr;
+    if (wave_.integrate_in_rstar) {
+        // 在r*积分时，dr随r变化，使用中点估算
+        double r_mid = (r_start + r_end) / 2.0;
+        avg_dr = step_size * (r_mid - bh_.r0) / r_mid;
+    } else {
+        avg_dr = step_size;
+    }
+    int points_per_period = static_cast<int>(period / avg_dr) + 1;
+    int check_window = n_periods * points_per_period;
 
     double max_r_end = max_r_factor * r_end;
     bool converged = false;
-    int check_count = 0;  // 检测次数计数器
+    int check_count = 0;
 
     // 积分并检测收敛
     while (r < max_r_end && !converged) {
         r_vec.push_back(r);
         sigma_vec.push_back(sigma);
 
-        // 当有足够的点时开始检测收敛（不限制必须 r > r_max）
+        // 当有足够的点时开始检测收敛
         if (static_cast<int>(sigma_vec.size()) > check_window) {
             check_count++;
 
@@ -151,7 +203,7 @@ SolveResult RadialFlowSolver::solve(double r_max, double epsilon, int n_points,
                 recent_sigma_corrected.push_back(sigma_vec[i] * phase_correction);
             }
 
-            // 计算平均值（使用修正后的 sigma）
+            // 计算平均值
             Complex sigma_mean = 0.0;
             for (const auto& s : recent_sigma_corrected) {
                 sigma_mean += s;
@@ -172,26 +224,16 @@ SolveResult RadialFlowSolver::solve(double r_max, double epsilon, int n_points,
             if (sigma_mean_abs > 1e-10) {
                 double relative_oscillation = max_deviation / sigma_mean_abs;
 
-                // 每1000次检测输出一次（已禁用）
-                // if (check_count % 1000 == 0) {
-                //     std::cout << "Debug: check_count=" << check_count
-                //               << ", r/r0=" << r/bh_.r0
-                //               << ", relative_osc=" << relative_oscillation
-                //               << ", threshold=" << convergence_threshold
-                //               << ", r>r_end=" << (r > r_end) << std::endl;
-                // }
-
                 // 判断是否收敛（但至少要积分到 r_max）
                 if (r > r_end && relative_oscillation < convergence_threshold) {
-                    // std::cout << "Converged! r/r0=" << r/bh_.r0
-                    //           << ", relative_osc=" << relative_oscillation << std::endl;
                     converged = true;
-                    break;  // 收敛后立即停止
+                    break;
                 }
             }
         }
 
         // 继续积分
+        double dr = step_size;
         rk4_step(r, sigma, dr);
         r += dr;
     }

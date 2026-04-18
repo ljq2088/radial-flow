@@ -44,6 +44,7 @@ struct WaveParams {
     int l;          // 角动量量子数
     int m = 0;      // 方位角量子数（Schwarzschild 不依赖 m）
     bool use_subleading_term = true;  // true=完整版本V=l(l+1)/r²+f'/r，false=简化版本V=l(l+1)/r²
+    bool integrate_in_rstar = false;  // true=在r*坐标积分，false=在r坐标积分
 };
 
 /**
@@ -77,10 +78,16 @@ public:
     double potential_V(double r) const;
 
     /**
-     * @brief Riccati 方程右端项
+     * @brief Riccati 方程右端项（r坐标）
      * dσ/dr = -1/r - V/(2iω) + [2iω/f + V/(iω)]σ - [-1/r + V/(2iω)]σ²
      */
     Complex sigma_rhs(double r, Complex sigma) const;
+
+    /**
+     * @brief Riccati 方程右端项（r*坐标）
+     * dσ/dr* = (dσ/dr) × (dr/dr*) = (dσ/dr) × (r - r₀)/r
+     */
+    Complex sigma_rhs_rstar(double r, Complex sigma) const;
 
     /**
      * @brief 计算视界附近的初始条件
@@ -125,8 +132,11 @@ private:
 
     /**
      * @brief RK4 单步积分
+     * @param r 当前r坐标
+     * @param sigma 当前σ值（会被更新）
+     * @param dr 步长（r坐标或r*坐标，取决于integrate_in_rstar；会被更新为实际的dr）
      */
-    void rk4_step(double r, Complex& sigma, double dr) const;
+    void rk4_step(double r, Complex& sigma, double& dr) const;
 
     /**
      * @brief RK45 单步积分（带误差估计）

@@ -1,0 +1,1194 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The Schwarzschild case (scalar field in 
+\begin_inset Formula $r$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+ds^{2}=-fdt^{2}+f^{-1}dr^{2}+r^{2}d\theta^{2}+r^{2}\sin^{2}\theta d\varphi^{2},\qquad f:=1-\frac{r_{0}(=2M)}{r}\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sqrt{-g}=r^{2}\sin\theta,\qquad\partial^{2}=-f^{-1}\partial_{t}^{2}+f\partial_{r}^{2}+r^{-2}\partial_{\theta}^{2}+r^{-2}\sin^{-2}\theta\partial_{\varphi}^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{\mu}(\sqrt{-g}g^{\mu\nu}\partial_{\nu}\psi)=0\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\sin\theta}\partial_{\theta}(\sin\theta\partial_{\theta}\psi)-\frac{\partial_{\varphi}^{2}\psi}{\sin^{2}\theta}=\partial_{r}(r^{2}g^{rr}\partial_{r}\psi)+r^{2}g^{tt}\partial_{t}^{2}\psi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi=R(r)Y_{lm}(\theta,\varphi)e^{-i\omega t}\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}(r^{2}J)-r^{2}g^{tt}\omega^{2}R-l(l+1)R=0,\qquad J:=g^{rr}\partial_{r}R
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}J+\frac{2}{r}J-g^{tt}\omega^{2}R-r^{-2}l(l+1)R=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma:=\frac{J}{-i\omega R}\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\partial_{r}\sigma & = & \frac{-\frac{2}{r}J+g^{tt}\omega^{2}R+r^{-2}l(l+1)R}{-i\omega R}+\frac{i\omega}{g^{rr}}\sigma^{2}\\
+ & = & -\frac{2}{r}\sigma+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{-i\omega}+\frac{i\omega}{g^{rr}}\sigma^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\sigma_{0}=(\sqrt{-g^{tt}g^{rr}})_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}\sigma\hat{=}\frac{-i\omega\frac{2}{r}\sigma(g^{rr})^{\prime}-(g^{tt}g^{rr})^{\prime}\omega^{2}-r^{-2}l(l+1)(g^{rr})^{\prime}-2\omega^{2}\sigma\sigma^{\prime}}{i\omega(g^{rr})^{\prime}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\sigma_{0}^{\prime}=\frac{-i\omega\frac{2}{r_{0}}\sigma_{0}(g^{rr})_{0}^{\prime}-(g^{tt}g^{rr})_{0}^{\prime}\omega^{2}-r_{0}^{-2}l(l+1)(g^{rr})_{0}^{\prime}}{i\omega(g^{rr})_{0}^{\prime}+2\omega^{2}\sigma_{0}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g^{rr}=1-\frac{r_{0}}{r}\Longrightarrow(g^{rr})_{0}^{\prime}=r_{0}^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\sigma_{0}=1,\qquad\sigma_{0}^{\prime}=\frac{-2i\omega r_{0}^{-1}-r_{0}^{-2}l(l+1)}{i\omega+2\omega^{2}r_{0}}
+\]
+
+\end_inset
+
+Since the scalar field has the asymptotic behavior
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+R\sim(A_{0}+\frac{\tilde{A}_{1}}{r})r^{-1}e^{i\omega r_{*}}+(B_{0}+\frac{\tilde{B}_{1}}{r})r^{-1}e^{-i\omega r_{*}},\qquad r_{*}=r+r_{0}\ln(\frac{r}{r_{0}}-1)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\Longrightarrow R & \sim & (A_{0}+\frac{\tilde{A}_{1}}{r})r^{-1}(\frac{r}{r_{0}}-1)^{i\omega r_{0}}e^{i\omega r}+(B_{0}+\frac{\tilde{B}_{1}}{r})r^{-1}(\frac{r}{r_{0}}-1)^{-i\omega r_{0}}e^{-i\omega r}\\
+ & \sim & (1+\frac{1}{r}\frac{A_{1}}{A_{0}})A_{0}r^{a}e^{i\omega r}+(1+\frac{1}{r}\frac{B_{1}}{B_{0}})B_{0}r^{b}e^{-i\omega r}\Longrightarrow
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+f\partial_{r}R & \sim & (1-\frac{r_{0}}{r})(i\omega+\frac{a}{r}+\frac{i\omega}{r}\frac{A_{1}}{A_{0}})A_{0}r^{a}e^{i\omega r}+(1-\frac{r_{0}}{r})(-i\omega+\frac{b}{r}-\frac{i\omega}{r}\frac{B_{1}}{B_{0}})B_{0}r^{b}e^{-i\omega r}\\
+ & \sim & (i\omega-\frac{1}{r}+\frac{i\omega}{r}\frac{A_{1}}{A_{0}})A_{0}r^{a}e^{i\omega r}+(-i\omega-\frac{1}{r}-\frac{i\omega}{r}\frac{B_{1}}{B_{0}})B_{0}r^{b}e^{-i\omega r}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J=\frac{f}{r}\partial_{r}(rR)=f\partial_{r}R+\frac{f}{r}R\sim(i\omega+\frac{i\omega}{r}\frac{A_{1}}{A_{0}})A_{0}r^{a}e^{i\omega r}+(-i\omega-\frac{i\omega}{r}\frac{B_{1}}{B_{0}})B_{0}r^{b}e^{-i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma=\frac{J+i\omega R}{J-i\omega R}=\frac{f\partial_{r}R+\frac{f}{r}R+i\omega R}{f\partial_{r}R+\frac{f}{r}R-i\omega R}\sim-\frac{A_{0}}{B_{0}}\frac{1+\frac{1}{r}\frac{A_{1}}{A_{0}}}{1+\frac{1}{r}\frac{B_{1}}{B_{0}}}e^{2i\omega(r+r_{0}\ln\frac{r}{r_{0}})}
+\]
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sigma e^{-2i\omega(r+r_{0}\ln\frac{r}{r_{0}})}=(\sigma_{0}+\frac{c}{r^{2}}e^{2i\omega(r+r_{0}\ln\frac{r}{r_{0}})}+\frac{d}{r^{2}}e^{-2i\omega(r+r_{0}\ln\frac{r}{r_{0}})})\frac{1+\frac{r_{0}}{r}-\frac{1}{r}[\frac{l(l+1)}{2i\omega}+i\omega r_{0}^{2}]}{1+\frac{r_{0}}{r}-\frac{1}{r}[\frac{l(l+1)}{-2i\omega}-i\omega r_{0}^{2}]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\partial_{r}\sigma & = & \frac{-\frac{2}{r}fR^{\prime}+g^{tt}\omega^{2}R+r^{-2}l(l+1)R+(r^{-1}f)^{\prime}R+r^{-1}fR^{\prime}+i\omega R^{\prime}}{f\partial_{r}R+\frac{f}{r}R-i\omega R}-\frac{f\partial_{r}R+\frac{f}{r}R+i\omega R}{(f\partial_{r}R+\frac{f}{r}R-i\omega R)^{2}}[-\frac{2}{r}fR^{\prime}+g^{tt}\omega^{2}R+r^{-2}l(l+1)R+(r^{-1}f)^{\prime}R+r^{-1}fR^{\prime}-i\omega R^{\prime}]\\
+ & = & \frac{(i\omega g_{rr}-\frac{1}{r})(J-\frac{f}{r}R)+[g^{tt}\omega^{2}+r^{-2}l(l+1)+(r^{-1}f)^{\prime}]R}{J-i\omega R}-\frac{J+i\omega R}{(J-i\omega R)^{2}}[(-i\omega g_{rr}-\frac{1}{r})(J-\frac{f}{r}R)+[g^{tt}\omega^{2}+r^{-2}l(l+1)+(r^{-1}f)^{\prime}]R]\\
+ & = & \frac{(i\omega g_{rr}-\frac{1}{r})\frac{J+i\omega R+J-i\omega R}{2}+[-\frac{i\omega}{r}+g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}]\frac{J+i\omega R-(J-i\omega R)}{2i\omega}}{J-i\omega R}-\frac{J+i\omega R}{(J-i\omega R)^{2}}[(-i\omega g_{rr}-\frac{1}{r})\frac{J+i\omega R+J-i\omega R}{2}+[\frac{i\omega}{r}+g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}]\frac{J+i\omega R-(J-i\omega R)}{2i\omega}]\\
+ & = & \frac{i\omega}{2}g_{rr}-\frac{1}{2r}-\frac{-\frac{i\omega}{r}+g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}+[\frac{i\omega}{2}g_{rr}-\frac{1}{2r}+\frac{\frac{i\omega}{r}+g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}]\sigma-[-\frac{i\omega}{2}g_{rr}-\frac{1}{2r}-\frac{-\frac{i\omega}{r}+g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}]\sigma-[-\frac{i\omega}{2}g_{rr}-\frac{1}{2r}+\frac{\frac{i\omega}{r}+g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}]\sigma^{2}\\
+ & = & \frac{i\omega}{2}g_{rr}-\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}+[i\omega g_{rr}+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{i\omega}]\sigma-[-\frac{i\omega}{2}g_{rr}+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}]\sigma^{2}\\
+ & = & -\frac{r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}+[2i\omega f^{-1}+\frac{r^{-2}l(l+1)+r^{-1}f^{\prime}}{i\omega}]\sigma-\frac{r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}\sigma^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}\sigma\hat{=}-\frac{r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}+2i\omega\frac{\sigma^{\prime}}{f^{\prime}}+\frac{r^{-2}l(l+1)+r^{-1}f^{\prime}}{i\omega}\sigma-\frac{r^{-2}l(l+1)+r^{-1}f^{\prime}}{2i\omega}\sigma^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\sigma_{0}=0,\qquad\sigma_{0}^{\prime}=\frac{-\frac{l(l+1)+r_{0}f_{0}^{\prime}}{2i\omega r_{0}}f_{0}^{\prime}}{r_{0}f_{0}^{\prime}-2i\omega r_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+R\sim Ae^{i\omega r}+Be^{-i\omega r}\Longrightarrow J=g^{rr}\partial_{r}R\sim i\omega(Ae^{i\omega r}-Be^{-i\omega r})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma=\frac{J+i\omega R}{J-i\omega R}\sim-\frac{A}{B}e^{2i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\partial_{r}\sigma & = & \frac{-\frac{2}{r}J+g^{tt}\omega^{2}R+r^{-2}l(l+1)R+i\omega R^{\prime}}{J-i\omega R}-\frac{J+i\omega R}{(J-i\omega R)^{2}}[-\frac{2}{r}J+g^{tt}\omega^{2}R+r^{-2}l(l+1)R-i\omega R^{\prime}]\\
+ & = & \frac{(i\omega g_{rr}-\frac{2}{r})\frac{J+i\omega R+J-i\omega R}{2}+[g^{tt}\omega^{2}+r^{-2}l(l+1)]\frac{J+i\omega R-(J-i\omega R)}{2i\omega}}{J-i\omega R}-\frac{J+i\omega R}{(J-i\omega R)^{2}}[(-i\omega g_{rr}-\frac{2}{r})\frac{J+i\omega R+J-i\omega R}{2}+[g^{tt}\omega^{2}+r^{-2}l(l+1)]\frac{J+i\omega R-(J-i\omega R)}{2i\omega}]\\
+ & = & \frac{i\omega}{2}g_{rr}-\frac{1}{r}-\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{2i\omega}+[\frac{i\omega}{2}g_{rr}-\frac{1}{r}+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{2i\omega}]\sigma-[-\frac{i\omega}{2}g_{rr}-\frac{1}{r}-\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{2i\omega}]\sigma-[-\frac{i\omega}{2}g_{rr}-\frac{1}{r}+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{2i\omega}]\sigma^{2}\\
+ & = & \frac{i\omega}{2}g_{rr}-\frac{1}{r}-\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{2i\omega}+[i\omega g_{rr}+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{i\omega}]\sigma-[-\frac{i\omega}{2}g_{rr}-\frac{1}{r}+\frac{g^{tt}\omega^{2}+r^{-2}l(l+1)}{2i\omega}]\sigma^{2}\\
+ & = & -\frac{1}{r}-\frac{r^{-2}l(l+1)}{2i\omega}+[2i\omega f^{-1}+\frac{r^{-2}l(l+1)}{i\omega}]\sigma-[-\frac{1}{r}+\frac{r^{-2}l(l+1)}{2i\omega}]\sigma^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}\sigma\hat{=}-\frac{1}{r}-\frac{r^{-2}l(l+1)}{2i\omega}+2i\omega\frac{\sigma^{\prime}}{f^{\prime}}+\frac{r^{-2}l(l+1)}{i\omega}\sigma-[-\frac{1}{r}+\frac{r^{-2}l(l+1)}{2i\omega}]\sigma^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\sigma_{0}=0,\qquad\sigma_{0}^{\prime}=\frac{-f_{0}^{\prime}-\frac{l(l+1)}{2i\omega r_{0}}f_{0}^{\prime}}{r_{0}f_{0}^{\prime}-2i\omega r_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Relation between different definitions of 
+\begin_inset Formula $\sigma$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\tilde{\sigma}=\frac{f\partial_{r}R+i\omega R+\frac{f}{r}R}{f\partial_{r}R-i\omega R+\frac{f}{r}R},\qquad\sigma=\frac{f\partial_{r}R+i\omega R}{f\partial_{r}R-i\omega R}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\tilde{\sigma}-1}=\frac{f\partial_{r}R-i\omega R+\frac{f}{r}R}{2i\omega R},\qquad\frac{1}{\sigma-1}=\frac{f\partial_{r}R-i\omega R}{2i\omega R}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\frac{1}{\tilde{\sigma}-1}-\frac{1}{\sigma-1}=\frac{f}{2i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\tilde{\sigma}-1}=\frac{1}{\sigma-1}+\frac{f}{2i\omega r}=\frac{1}{\sigma-1}(1-\frac{f}{2i\omega r}+\frac{f}{2i\omega r}\sigma)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{\sigma}=\frac{\sigma-1}{1-\frac{f}{2i\omega r}+\frac{f}{2i\omega r}\sigma}+1=\frac{(1+\frac{f}{2i\omega r})\sigma-\frac{f}{2i\omega r}}{\frac{f}{2i\omega r}\sigma+(1-\frac{f}{2i\omega r})}
+\]
+
+\end_inset
+
+Generally,
+\begin_inset Formula 
+\[
+\sigma^{\prime}=q+s\sigma+w\sigma^{2}=\left(\begin{array}{cc}
+1 & -\sigma\end{array}\right)\left(\begin{array}{cc}
+q & -\frac{s}{2}\\
+-\frac{s}{2} & w
+\end{array}\right)\left(\begin{array}{c}
+1\\
+-\sigma
+\end{array}\right),\qquad\tau=\frac{a\sigma+b}{c\sigma+d}\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau^{\prime} & = & \frac{a^{\prime}\sigma+aq+as\sigma+aw\sigma^{2}+b^{\prime}}{c\sigma+d}-\frac{(a\sigma+b)(c^{\prime}\sigma+cq+cs\sigma+cw\sigma^{2}+d^{\prime})}{(c\sigma+d)^{2}}\\
+ & = & \frac{a^{\prime}\sigma+aq+as\sigma+w(a\sigma+b)\sigma-wb\sigma+b^{\prime}}{c\sigma+d}-\frac{(a\sigma+b)(c^{\prime}\sigma+cq+cs\sigma+w[c\sigma+d]\sigma-wd\sigma+d^{\prime})}{(c\sigma+d)^{2}}\\
+ & = & \frac{(a^{\prime}+as-wb)\sigma+(aq+b^{\prime})}{c\sigma+d}-\frac{(a\sigma+b)([c^{\prime}+cs-wd]\sigma+[cq+d^{\prime}])}{(c\sigma+d)^{2}}\\
+ & = & \frac{(a^{\prime}+as-wb)[\frac{d}{\Delta}(a\sigma+b)-\frac{b}{\Delta}(c\sigma+d)]+(aq+b^{\prime})[-\frac{c}{\Delta}(a\sigma+b)+\frac{a}{\Delta}(c\sigma+d)]}{c\sigma+d}-\frac{(a\sigma+b)([c^{\prime}+cs-wd]\sigma+[cq+d^{\prime}])}{(c\sigma+d)^{2}}\\
+ & = & \frac{a}{\Delta}(aq+b^{\prime})-\frac{b}{\Delta}(a^{\prime}+as-wb)+\frac{d(a^{\prime}+as-wb)-c(aq+b^{\prime})}{\Delta}\tau-\frac{(a\sigma+b)([c^{\prime}+cs-wd][\frac{d}{\Delta}(a\sigma+b)-\frac{b}{\Delta}(c\sigma+d)]+[cq+d^{\prime}][-\frac{c}{\Delta}(a\sigma+b)+\frac{a}{\Delta}(c\sigma+d)])}{(c\sigma+d)^{2}}\\
+ & = & \frac{a}{\Delta}(aq+b^{\prime})-\frac{b}{\Delta}(a^{\prime}+as-wb)+\frac{d(a^{\prime}+as-wb)-c(aq+b^{\prime})}{\Delta}\tau-\frac{-b[c^{\prime}+cs-wd]+a[cq+d^{\prime}]}{\Delta}\tau-\frac{d[c^{\prime}+cs-wd]-c[cq+d^{\prime}]}{\Delta}\tau^{2}\\
+ & = & \frac{\vec{N}\cdot\vec{N}+W[a,b]}{\Delta}+\frac{W[d,a]-W[c,b]-2\vec{N}\cdot\vec{D}}{\Delta}\tau+\frac{\vec{D}\cdot\vec{D}+W[c,d]}{\Delta}\tau^{2},\qquad\Delta:=ad-bc
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\sigma=\frac{d}{\Delta}(a\sigma+b)-\frac{b}{\Delta}(c\sigma+d),\qquad1=-\frac{c}{\Delta}(a\sigma+b)+\frac{a}{\Delta}(c\sigma+d)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma=\frac{eR^{\prime}+fR}{gR^{\prime}+hR}\Longrightarrow\tau=\frac{iR^{\prime}+jR}{kR^{\prime}+lR},\qquad\left(\begin{array}{cc}
+i & j\\
+k & l
+\end{array}\right)=\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)\left(\begin{array}{cc}
+e & f\\
+g & h
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\vec{N}:=(a,b),\qquad\vec{D}:=(c,d),\qquad\vec{A}\cdot\vec{B}:=A_{1}qB_{1}+A_{2}wB_{2}-A_{1}\frac{s}{2}B_{2}-A_{2}\frac{s}{2}B_{1},\qquad W[a,b]:=b^{\prime}a-a^{\prime}b
+\]
+
+\end_inset
+
+Actually,
+\begin_inset Formula 
+\[
+\tau^{\prime}=\frac{\vec{N}\bullet\vec{N}}{\Delta}-2\frac{\vec{N}\bullet\vec{D}}{\Delta}\tau+\frac{\vec{D}\bullet\vec{D}}{\Delta}\tau^{2},\qquad\vec{A}\bullet\vec{B}:=\vec{A}\cdot\vec{B}+\frac{1}{2}W[A_{1},B_{2}]-\frac{1}{2}W[A_{2},B_{1}]=\left(\begin{array}{cc}
+A_{1} & A_{2}\end{array}\right)\left(\begin{array}{cc}
+q & \frac{\mathcal{W}(=\overrightarrow{\partial}-\overleftarrow{\partial})}{2}-\frac{s}{2}\\
+\frac{\mathcal{W}^{T}(=-\mathcal{W})}{2}-\frac{s}{2} & w
+\end{array}\right)\left(\begin{array}{c}
+B_{1}\\
+B_{2}
+\end{array}\right)
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $a\mathcal{W}b:=W[a,b]$
+\end_inset
+
+ a skew-symmetric form.
+ Further,
+\begin_inset Formula 
+\[
+\tau^{\prime}=\frac{1}{\Delta}\left(\begin{array}{cc}
+1 & -\tau\end{array}\right)C\left(\begin{array}{cc}
+q & \frac{\mathcal{W}}{2}-\frac{s}{2}\\
+\frac{\mathcal{W}^{T}}{2}-\frac{s}{2} & w
+\end{array}\right)C^{T}\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right),\qquad C=\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)
+\]
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+C^{T}\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right)=\left(\begin{array}{c}
+a-c\frac{a\sigma+b}{c\sigma+d}\\
+b-d\frac{a\sigma+b}{c\sigma+d}
+\end{array}\right)=\frac{\Delta}{c\sigma+d}\left(\begin{array}{c}
+1\\
+-\sigma
+\end{array}\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\sigma=\frac{d\tau-b}{-c\tau+a},\qquad c\sigma+d=\frac{cd\tau-cb}{-c\tau+a}+d=\frac{\Delta}{-c\tau+a}\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau^{\prime} & = & \frac{a\sigma^{\prime}+a^{\prime}\sigma+b^{\prime}}{c\sigma+d}-\frac{(a\sigma+b)(c\sigma^{\prime}+c^{\prime}\sigma+d^{\prime})}{(c\sigma+d)^{2}}=\frac{a^{\prime}\sigma+b^{\prime}}{c\sigma+d}+\frac{\Delta\sigma^{\prime}}{(c\sigma+d)^{2}}-\frac{(a\sigma+b)(c^{\prime}\sigma+d^{\prime})}{(c\sigma+d)^{2}}\\
+ & = & \frac{\Delta\sigma^{\prime}}{(c\sigma+d)^{2}}+\frac{W[c,a]\sigma^{2}+(W[c,b]+W[d,a])\sigma+W[d,b]}{(c\sigma+d)^{2}}\\
+ & = & \Delta^{-1}(-c\tau+a)^{2}[q+s\frac{d\tau-b}{-c\tau+a}+w(\frac{d\tau-b}{-c\tau+a})^{2}]+\Delta^{-2}(-c\tau+a)^{2}(W[c,a](\frac{d\tau-b}{-c\tau+a})^{2}+(W[c,b]+W[d,a])\frac{d\tau-b}{-c\tau+a}+W[d,b])\\
+ & = & \Delta^{-1}[q(-c\tau+a)^{2}+s(d\tau-b)(-c\tau+a)+w(d\tau-b)^{2}]+\Delta^{-2}(W[c,a][d\tau-b]^{2}+(W[c,b]+W[d,a])[d\tau-b][-c\tau+a]+W[d,b][-c\tau+a]^{2})\\
+ & = & \cdots
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+ &  & d^{2}(ca^{\prime}-ac^{\prime})-cd(cb^{\prime}-bc^{\prime}+da^{\prime}-ad^{\prime})+c^{2}(db^{\prime}-bd^{\prime})\\
+ & = & d^{2}(-ac^{\prime})-cd(-bc^{\prime}-ad^{\prime})+c^{2}(-bd^{\prime})=\Delta W[c,d]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+C=\left(\begin{array}{cc}
+a & 0\\
+0 & a^{-1}
+\end{array}\right)\Longrightarrow\tau^{\prime}=\left(\begin{array}{cc}
+1 & -\tau\end{array}\right)\left(\begin{array}{cc}
+qa^{2} & \frac{W[a,a^{-1}]}{2}-\frac{s}{2}\\
+\frac{W[a,a^{-1}]}{2}-\frac{s}{2} & wa^{-2}
+\end{array}\right)\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right)=\left(\begin{array}{cc}
+1 & -\tau\end{array}\right)\left(\begin{array}{cc}
+qa^{2} & -\frac{a^{\prime}}{a}-\frac{s}{2}\\
+-\frac{a^{\prime}}{a}-\frac{s}{2} & wa^{-2}
+\end{array}\right)\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a=e^{-i\omega(r+r_{0}\ln\frac{r}{r_{0}})}\Longrightarrow\tau^{\prime}=\left(\begin{array}{cc}
+1 & -\tau\end{array}\right)\left(\begin{array}{cc}
+qe^{-2i\omega(r+r_{0}\ln\frac{r}{r_{0}})} & i\omega(1-\frac{r_{0}^{2}}{r^{2}})-\frac{s}{2}\\
+i\omega(1-\frac{r_{0}^{2}}{r^{2}})-\frac{s}{2} & we^{2i\omega(r+r_{0}\ln\frac{r}{r_{0}})}
+\end{array}\right)\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C=\left(\begin{array}{cc}
+1 & a\\
+0 & 1
+\end{array}\right)\Longrightarrow\tau^{\prime}=\left(\begin{array}{cc}
+1 & -\tau\end{array}\right)\left(\begin{array}{cc}
+q-as+a^{2}w+W[1,a] & aw-\frac{s}{2}\\
+aw-\frac{s}{2} & w
+\end{array}\right)\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right)=\left(\begin{array}{cc}
+1 & -\tau\end{array}\right)\left(\begin{array}{cc}
+q-as+a^{2}w+a^{\prime} & aw-\frac{s}{2}\\
+aw-\frac{s}{2} & w
+\end{array}\right)\left(\begin{array}{c}
+1\\
+-\tau
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)\left(\begin{array}{cc}
+0 & \frac{\mathcal{W}}{2}\\
+\frac{\mathcal{W}^{T}}{2} & 0
+\end{array}\right)\left(\begin{array}{cc}
+a & c\\
+b & d
+\end{array}\right)=(-W[d,a]+W[c,b])\left(\begin{array}{cc}
+0 & \frac{1}{2}\\
+\frac{1}{2} & 0
+\end{array}\right)+\left(\begin{array}{cc}
+W[a,b] & 0\\
+0 & W[c,d]
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+e & f\\
+g & h
+\end{array}\right)\left(\begin{array}{cc}
+0 & \frac{\mathcal{W}}{2}\\
+\frac{\mathcal{W}^{T}}{2} & 0
+\end{array}\right)\left(\begin{array}{cc}
+e & g\\
+f & h
+\end{array}\right)=(-W[h,e]+W[g,f])\left(\begin{array}{cc}
+0 & \frac{1}{2}\\
+\frac{1}{2} & 0
+\end{array}\right)+\left(\begin{array}{cc}
+W[e,f] & 0\\
+0 & W[g,h]
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)\left(\begin{array}{cc}
+e & f\\
+g & h
+\end{array}\right)\left(\begin{array}{cc}
+0 & \frac{\mathcal{W}}{2}\\
+\frac{\mathcal{W}^{T}}{2} & 0
+\end{array}\right)\left(\begin{array}{cc}
+e & g\\
+f & h
+\end{array}\right)\left(\begin{array}{cc}
+a & c\\
+b & d
+\end{array}\right)=\left(\begin{array}{cc}
+ae+bg & af+bh\\
+ce+dg & cf+dh
+\end{array}\right)\left(\begin{array}{cc}
+0 & \frac{\mathcal{W}}{2}\\
+\frac{\mathcal{W}^{T}}{2} & 0
+\end{array}\right)\left(\begin{array}{cc}
+ae+bg & ce+dg\\
+af+bh & cf+dh
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+W[cf+dh,ae+bg] & = & (cf+dh)(ae+bg)^{\prime}-(cf+dh)^{\prime}(ae+bg)\\
+ & = & (cf+dh)(a^{\prime}e+ae^{\prime}+b^{\prime}g+bg^{\prime})-(c^{\prime}f+cf^{\prime}+d^{\prime}h+dh^{\prime})(ae+bg)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+W[ce+dg,af+bh] & = & (ce+dg)(af+bh)^{\prime}-(ce+dg)^{\prime}(af+bh)\\
+ & = & (ce+dg)(a^{\prime}f+af^{\prime}+b^{\prime}h+bh^{\prime})-(c^{\prime}e+ce^{\prime}+d^{\prime}g+dg^{\prime})(af+bh)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+W[ce+dg,af+bh]-W[cf+dh,ae+bg] & = & (ce+dg)(a^{\prime}f+af^{\prime}+b^{\prime}h+bh^{\prime})-(cf+dh)(a^{\prime}e+ae^{\prime}+b^{\prime}g+bg^{\prime})\\
+ &  & -(c^{\prime}e+ce^{\prime}+d^{\prime}g+dg^{\prime})(af+bh)+(c^{\prime}f+cf^{\prime}+d^{\prime}h+dh^{\prime})(ae+bg)\\
+ & = & (ce+dg)(af^{\prime}+bh^{\prime})+ceb^{\prime}h+dga^{\prime}f-(cf+dh)(ae^{\prime}+bg^{\prime})-cfb^{\prime}g-dha^{\prime}e\\
+ &  & -(ce^{\prime}+dg^{\prime})(af+bh)-d^{\prime}gaf-c^{\prime}ebh+(cf^{\prime}+dh^{\prime})(ae+bg)+d^{\prime}hae+c^{\prime}fbg\\
+ & = & (ceaf^{\prime}+dgaf^{\prime}+cebh^{\prime}+dgbh^{\prime})+cb^{\prime}\Delta_{2}-(cfae^{\prime}+dhae^{\prime}+cfbg^{\prime}+dhbg^{\prime})-da^{\prime}\Delta_{2}\\
+ &  & -(ce^{\prime}af+dg^{\prime}af+ce^{\prime}bh+dg^{\prime}bh)-c^{\prime}b\Delta_{2}+(cf^{\prime}ae+dh^{\prime}ae+cf^{\prime}bg+dh^{\prime}bg)+d^{\prime}a\Delta_{2}\\
+ & = & (2ceaf^{\prime}+daW[g,f]+cbW[e,h]+2dgbh^{\prime})-(2cfae^{\prime}+daW[h,e]+cbW[f,g]+2dhbg^{\prime})\\
+ &  & +cb^{\prime}\Delta_{2}-da^{\prime}\Delta_{2}-c^{\prime}b\Delta_{2}+d^{\prime}a\Delta_{2}\\
+ & = & 2caW[e,f]+2dbW[g,h]+(cb+da)(W[e,h]-W[f,g])+\Delta_{2}(W[c,b]-W[d,a])
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+q=-\frac{1}{r},\qquad s=2i\omega f^{-1},\qquad w=\frac{1}{r},\qquad C=\left(\begin{array}{cc}
+1+\frac{f}{2i\omega r} & -\frac{f}{2i\omega r}\\
+\frac{f}{2i\omega r} & 1-\frac{f}{2i\omega r}
+\end{array}\right)\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+C\left(\begin{array}{cc}
+q & -\frac{s}{2}\\
+-\frac{s}{2} & w
+\end{array}\right)C^{T} & = & \left(\begin{array}{cc}
+(1+\frac{f}{2i\omega r})^{2}q+(1+\frac{f}{2i\omega r})\frac{f}{2i\omega r}s+(\frac{f}{2i\omega r})^{2}w & (1+\frac{f}{2i\omega r})\frac{f}{2i\omega r}q-[1-2(\frac{f}{2i\omega r})^{2}]\frac{s}{2}-\frac{f}{2i\omega r}(1-\frac{f}{2i\omega r})w\\
+\frac{f}{2i\omega r}(1+\frac{f}{2i\omega r})q-[1-2(\frac{f}{2i\omega r})^{2}]\frac{s}{2}-\frac{f}{2i\omega r}(1-\frac{f}{2i\omega r})w & (\frac{f}{2i\omega r})^{2}q-\frac{f}{2i\omega r}(1-\frac{f}{2i\omega r})s+(1-\frac{f}{2i\omega r})^{2}w
+\end{array}\right)\\
+ & = & \left(\begin{array}{cc}
+-\frac{1}{r}(1+\frac{f}{2i\omega r})^{2}+\frac{1}{r}(1+\frac{f}{2i\omega r})+\frac{1}{r}(\frac{f}{2i\omega r})^{2} & -\frac{1}{r}(1+\frac{f}{2i\omega r})\frac{f}{2i\omega r}-[1-2(\frac{f}{2i\omega r})^{2}]\frac{i\omega}{f}-\frac{1}{r}\frac{f}{2i\omega r}(1-\frac{f}{2i\omega r})\\
+* & -\frac{1}{r}(\frac{f}{2i\omega r})^{2}-\frac{1}{r}(1-\frac{f}{2i\omega r})+\frac{1}{r}(1-\frac{f}{2i\omega r})^{2}
+\end{array}\right)\\
+ & = & \left(\begin{array}{cc}
+-\frac{f}{2i\omega r^{2}} & -\frac{f}{2i\omega r^{2}}-\frac{i\omega}{f}\\
+* & -\frac{f}{2i\omega r^{2}}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cc}
+1+\frac{f}{2i\omega r} & -\frac{f}{2i\omega r}\\
+\frac{f}{2i\omega r} & 1-\frac{f}{2i\omega r}
+\end{array}\right)\left(\begin{array}{cc}
+0 & \frac{\mathcal{W}}{2}\\
+\frac{\mathcal{W}^{T}}{2} & 0
+\end{array}\right)\left(\begin{array}{cc}
+1+\frac{f}{2i\omega r} & \frac{f}{2i\omega r}\\
+-\frac{f}{2i\omega r} & 1-\frac{f}{2i\omega r}
+\end{array}\right)=\left(\begin{array}{cc}
+W[1+\frac{f}{2i\omega r},-\frac{f}{2i\omega r}] & \frac{1}{2}W[\frac{f}{2i\omega r},-\frac{f}{2i\omega r}]+\frac{1}{2}W[1+\frac{f}{2i\omega r},1-\frac{f}{2i\omega r}]\\
+* & W[\frac{f}{2i\omega r},1-\frac{f}{2i\omega r}]
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+W[1+\frac{f}{2i\omega r},-\frac{f}{2i\omega r}]=(1+\frac{f}{2i\omega r})(-\frac{f}{2i\omega r})^{\prime}-(-\frac{f}{2i\omega r})(1+\frac{f}{2i\omega r})^{\prime}=\frac{f}{2i\omega r^{2}}-\frac{f^{\prime}}{2i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+W[\frac{f}{2i\omega r},1-\frac{f}{2i\omega r}]=\frac{f}{2i\omega r}(1-\frac{f}{2i\omega r})^{\prime}-(\frac{f}{2i\omega r})^{\prime}(1-\frac{f}{2i\omega r})=\frac{f}{2i\omega r^{2}}-\frac{f^{\prime}}{2i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{2}W[1+\frac{f}{2i\omega r},1-\frac{f}{2i\omega r}]=\frac{1}{2}(1+\frac{f}{2i\omega r})(-\frac{f}{2i\omega r})^{\prime}-\frac{1}{2}(1-\frac{f}{2i\omega r})(\frac{f}{2i\omega r})^{\prime}=\frac{f}{2i\omega r^{2}}-\frac{f^{\prime}}{2i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow C\left(\begin{array}{cc}
+q & \frac{\mathcal{W}}{2}-\frac{s}{2}\\
+\frac{\mathcal{W}^{T}}{2}-\frac{s}{2} & w
+\end{array}\right)C^{T}=\left(\begin{array}{cc}
+-\frac{f^{\prime}}{2i\omega r} & -\frac{i\omega}{f}-\frac{f^{\prime}}{2i\omega r}\\
+* & -\frac{f^{\prime}}{2i\omega r}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The Minkowski case:
+\begin_inset Formula 
+\[
+\partial_{r}(r^{2}\partial_{r}R)+r^{2}\omega^{2}R-l(l+1)R=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+R=\frac{C(r)}{r}e^{\pm i\omega r}\Longrightarrow\partial_{r}R=\frac{C^{\prime}}{r}e^{\pm i\omega r}+\frac{C}{r}(\pm i\omega-\frac{1}{r})e^{\pm i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}[C^{\prime}r+C(\pm i\omega r-1)]\pm i\omega[C^{\prime}r+C(\pm i\omega r-1)]+\omega^{2}Cr-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C^{\prime\prime}r+C^{\prime}+C^{\prime}(\pm i\omega r-1)\pm i\omega C\pm i\omega[C^{\prime}r-C]-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C^{\prime\prime}r\pm2i\omega C^{\prime}r-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=1/r\Longrightarrow\partial_{r}=-z^{2}\partial_{z}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z^{2}\partial_{z}(z^{2}\partial_{z}C)r\pm2i\omega(-z^{2}\partial_{z}C)r-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{z}(z^{2}\partial_{z}C)\pm2i\omega(-\partial_{z}C)-l(l+1)C=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z^{2}\partial_{z}(\partial_{z}R)+r^{2}\omega^{2}R-l(l+1)R=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+R\sim Cze^{\pm i\omega/z}\Longrightarrow\partial_{z}R=(\partial_{z}Cz+C\pm i\omega\frac{-C}{z})e^{\pm i\omega/z}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z^{2}\partial_{z}(\partial_{z}Cz+C\pm i\omega\frac{-C}{z})e^{\pm i\omega/z}\pm i\omega(-1)(\partial_{z}Cz+C\pm i\omega\frac{-C}{z})e^{\pm i\omega/z}+r^{2}\omega^{2}R-l(l+1)R=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z^{2}(\partial_{z}^{2}Cz+2\partial_{z}C)\pm i\omega(-2\partial_{z}Cz)-l(l+1)Cz=0
+\]
+
+\end_inset
+
+The Schwarzschild case:
+\begin_inset Formula 
+\[
+\partial_{r}(r^{2}f\partial_{r}R)+r^{2}\frac{\omega^{2}}{f}R-l(l+1)R=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+R=C(r)r^{-1\pm i\omega r_{0}}e^{\pm i\omega r}\Longrightarrow\partial_{r}R=C^{\prime}r^{-1\pm i\omega r_{0}}e^{\pm i\omega r}+Cr^{-1\pm i\omega r_{0}}(\pm i\omega+\frac{-1\pm i\omega r_{0}}{r})e^{\pm i\omega r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{r}[fC^{\prime}r^{1\pm i\omega r_{0}}+fCr^{\pm i\omega r_{0}}(\pm i\omega r-1\pm i\omega r_{0})]\pm i\omega f[C^{\prime}r^{1\pm i\omega r_{0}}+Cr^{\pm i\omega r_{0}}(\pm i\omega r-1\pm i\omega r_{0})]+\frac{\omega^{2}}{f}Cr^{1\pm i\omega r_{0}}-l(l+1)Cr^{-1\pm i\omega r_{0}}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(fC^{\prime})^{\prime}r+(1\pm i\omega r_{0})fC^{\prime}+(fC)^{\prime}(\pm i\omega r-1\pm i\omega r_{0})\pm i\omega\frac{r_{0}}{r}fC(\pm i\omega r-1\pm i\omega r_{0})\pm i\omega fr[C^{\prime}+C(\pm i\omega\pm i\omega\frac{r_{0}}{r})]+\frac{\omega^{2}}{f}Cr-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(fC^{\prime})^{\prime}r+(1\pm i\omega r_{0})fC^{\prime}+(fC)^{\prime}(\pm i\omega r-1\pm i\omega r_{0})\pm i\omega\frac{r_{0}}{r}fC\pm i\omega frC^{\prime}-\omega^{2}frC(1+\frac{r_{0}}{r})^{2}+\frac{\omega^{2}}{f}Cr-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(fC^{\prime})^{\prime}r+(1\pm i\omega r_{0}\pm i\omega r)fC^{\prime}+(fC)^{\prime}(\pm i\omega r-1\pm i\omega r_{0})\pm i\omega\frac{r_{0}}{r}fC+\frac{\omega^{2}}{f}C\frac{r_{0}^{2}}{r}(2-\frac{r_{0}^{2}}{r^{2}})-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(fC^{\prime})^{\prime}r\pm2i\omega(r+r_{0})fC^{\prime}\pm i\omega(r+r_{0})f^{\prime}C-f^{\prime}C\pm i\omega\frac{r_{0}}{r}fC+\frac{\omega^{2}}{f}\frac{r_{0}^{2}}{r}(2-\frac{r_{0}^{2}}{r^{2}})C-l(l+1)\frac{C}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=1/r\Longrightarrow\partial_{r}=-z^{2}\partial_{z}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{z}(z^{2}f\partial_{z}C)\pm2i\omega(1+r_{0}z)(-f\partial_{z}C)\pm i\omega(1+r_{0}z)(-\partial_{z}fC)+z\partial_{z}fC\pm i\omega r_{0}fC+\frac{\omega^{2}r_{0}^{2}}{f}(2-r_{0}^{2}z^{2})C-l(l+1)C=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\partial_{z}(z^{2}f\partial_{z}C)\pm2i\omega(r_{0}^{2}z^{2}-1)\partial_{z}C\pm2i\omega r_{0}{\color{red}r_{0}z}C-r_{0}zC+\frac{\omega^{2}r_{0}^{2}}{f}(2-r_{0}^{2}z^{2})C-l(l+1)C=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+R=\frac{C}{r}e^{\pm i\omega(r+r_{0}\ln\frac{r}{r_{0}})},\qquad\partial_{z}R=-r^{2}\partial_{r}R=-re^{\pm i\omega(r+r_{0}\ln\frac{r}{r_{0}})}(C^{\prime}\pm i\omega C+\frac{-1\pm i\omega r_{0}}{r}C)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C=C_{0}+C_{1}z+C_{2}z^{2}+\cdots\Longrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\pm2i\omega(-C_{1})\pm2i\omega r_{0}C_{0}+2\omega^{2}r_{0}^{2}C_{0}-l(l+1)C_{0}=0\Longrightarrow C_{1}=-[\frac{l(l+1)}{\pm2i\omega}+r_{0}(-1\pm i\omega r_{0})]C_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow1+\frac{1}{r}\frac{A_{1}}{A_{0}}=1+{\color{red}\frac{r_{0}}{r}}-\frac{1}{r}[\frac{l(l+1)}{2i\omega}+i\omega r_{0}^{2}],\qquad1+\frac{1}{r}\frac{B_{1}}{B_{0}}=1+{\color{red}\frac{r_{0}}{r}}-\frac{1}{r}[\frac{l(l+1)}{-2i\omega}-i\omega r_{0}^{2}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

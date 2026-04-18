@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "l": 2,
+    "m": 2,
+    "s": -2,
+    "a_min": 1e-05,
+    "a_max": 0.999999,
+    "n_a": 8,
+    "omega_min": 1e-06,
+    "n_omega": 10,
+    "omega_scale": 1.0,
+    "eta_max": 0.995,
+    "k_margin": 0.01,
+    "r_match": 8.0,
+    "n_cheb": 32,
+    "mma_ref_mode": "relative",
+    "mma_kernel_path": "/mnt/f/mma/WolframKernel.exe",
+    "mma_wl_path_win": "F:/EMRI/Radial_flow/Radial_Function.wl"
+  },
+  "output_png": "spec_flow_method_Kerr/kerr_matcher_project/tests/outputs/safe_domain_smoke/safe_domain_triptych.png",
+  "counts": {
+    "lambda": {
+      "ok": 80
+    },
+    "ramp": {
+      "ok": 15,
+      "ramp_floating_point": 65
+    }
+  },
+  "omega_tick_examples": [
+    1e-06,
+    0.0001,
+    0.01,
+    1.0,
+    10.0,
+    100.0
+  ]
+}

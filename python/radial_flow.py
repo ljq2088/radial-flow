@@ -42,8 +42,8 @@ class SchwarzschildParams:
 
 class WaveParams:
     """标量波参数（Python 包装）"""
-    def __init__(self, omega: complex, l: int, m: int = 0, use_subleading_term: bool = True):
-        self._cpp_obj = cpp.WaveParams(omega, l, m, use_subleading_term)
+    def __init__(self, omega: complex, l: int, m: int = 0, use_subleading_term: bool = True, integrate_in_rstar: bool = False):
+        self._cpp_obj = cpp.WaveParams(omega, l, m, use_subleading_term, integrate_in_rstar)
 
     @property
     def omega(self):
@@ -76,6 +76,14 @@ class WaveParams:
     @use_subleading_term.setter
     def use_subleading_term(self, value):
         self._cpp_obj.use_subleading_term = value
+
+    @property
+    def integrate_in_rstar(self):
+        return self._cpp_obj.integrate_in_rstar
+
+    @integrate_in_rstar.setter
+    def integrate_in_rstar(self, value):
+        self._cpp_obj.integrate_in_rstar = value
 
 
 class RadialFlowSolver:
